@@ -66,11 +66,12 @@ public class SplashScreenWindow extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("PlatePal");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setUndecorated(true);
         setResizable(false);
 
-        loadingBar.setForeground(new java.awt.Color(204, 102, 0));
+        loadingBar.setForeground(new java.awt.Color(204, 153, 0));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/logo-transparent-275px.png"))); // NOI18N

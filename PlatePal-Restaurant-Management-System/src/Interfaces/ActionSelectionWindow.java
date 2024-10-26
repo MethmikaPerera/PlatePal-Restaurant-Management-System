@@ -37,6 +37,7 @@ public class ActionSelectionWindow extends javax.swing.JFrame {
         closeButton = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Select Action | PlatePal");
         setUndecorated(true);
         setResizable(false);
 
@@ -139,15 +140,18 @@ public class ActionSelectionWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void customerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerButtonActionPerformed
+        new CustomerOrderingWaitWindow().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_customerButtonActionPerformed
 
     private void employeeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeeButtonActionPerformed
-        // TODO add your handling code here:
+        new EmployeeLoginWindow().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_employeeButtonActionPerformed
 
     private void adminButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminButtonActionPerformed
-        // TODO add your handling code here:
+        new AdminLoginWindow().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_adminButtonActionPerformed
 
     private void closeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeButtonMouseClicked
