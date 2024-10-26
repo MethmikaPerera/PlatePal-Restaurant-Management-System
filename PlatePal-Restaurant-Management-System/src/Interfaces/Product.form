@@ -25,18 +25,18 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="297" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="284" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="476" max="32767" attributes="0"/>
+              <EmptySpace pref="486" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="180" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="178" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="337" max="32767" attributes="0"/>
+              <EmptySpace pref="327" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -44,7 +44,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Customer"/>
+        <Property name="text" type="java.lang.String" value="Product"/>
       </Properties>
     </Component>
   </SubComponents>

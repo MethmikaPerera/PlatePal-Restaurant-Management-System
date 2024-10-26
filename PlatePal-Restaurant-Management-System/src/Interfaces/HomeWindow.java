@@ -26,6 +26,7 @@ public class HomeWindow extends javax.swing.JFrame {
     private void moveRight(){
         Thread t = new Thread(
                     () -> {
+                        
                         for (int i = 200; i >= 80; i-=10) {
                             jPanel2.setPreferredSize(new Dimension(i,jPanel2.getHeight()));
                             SwingUtilities.updateComponentTreeUI(jPanel2);
@@ -37,8 +38,20 @@ public class HomeWindow extends javax.swing.JFrame {
                             }
                         }
                     }
+         );
+        t.start();
+        jButton1.setText("");
+        jButton2.setText("");
+        jButton3.setText("");
+        jButton4.setText("");
+        jButton5.setText("");
+        jButton6.setText("");
+        jButton7.setText("");
+        jButton8.setText("");
+        jButton9.setText("");
+        jButton10.setText("");
+        jButton11.setText("");
             
-            );
     }
     
     private void moveLeft(){
@@ -57,6 +70,21 @@ public class HomeWindow extends javax.swing.JFrame {
                     }
             
             );
+        t.start();
+
+
+            jButton1.setText("Customer");
+            jButton2.setText("Product");
+            jButton3.setText("Sales");
+            jButton4.setText("Attendance");
+            jButton5.setText("Stock");
+            jButton6.setText("Inventory");
+            jButton7.setText("Backup");
+            jButton8.setText("GRN");
+            jButton9.setText("Return");
+            jButton10.setText("PO");
+            jButton11.setText("Report");
+            
     }
 
     /**
@@ -96,7 +124,7 @@ public class HomeWindow extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 153, 0));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/close.png"))); // NOI18N
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -122,9 +150,10 @@ public class HomeWindow extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Helvetica Neue", 1, 30)); // NOI18N
         jLabel4.setText("App Name");
 
+        jToggleButton1.setBackground(new java.awt.Color(204, 204, 204));
         jToggleButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/menu.png"))); // NOI18N
         jToggleButton1.setBorder(null);
-        jToggleButton1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jToggleButton1.setPreferredSize(new java.awt.Dimension(50, 32));
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton1ActionPerformed(evt);
@@ -136,11 +165,10 @@ public class HomeWindow extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jToggleButton1)
-                .addGap(38, 38, 38)
+                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 655, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 637, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
@@ -153,15 +181,15 @@ public class HomeWindow extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(7, 7, 7)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3)
                             .addComponent(jLabel2)
                             .addComponent(jLabel1))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addComponent(jToggleButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_START);
@@ -174,58 +202,118 @@ public class HomeWindow extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(233, 231, 231));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/user.png"))); // NOI18N
         jButton1.setText("Customer");
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jButton1.setIconTextGap(10);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jButton1.setIconTextGap(0);
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
             }
         });
         jPanel2.add(jButton1);
 
         jButton2.setBackground(new java.awt.Color(233, 231, 231));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/box.png"))); // NOI18N
         jButton2.setText("Product");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
         jPanel2.add(jButton2);
 
         jButton3.setBackground(new java.awt.Color(233, 231, 231));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/sales.png"))); // NOI18N
         jButton3.setText("Sales");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
         jPanel2.add(jButton3);
 
         jButton4.setBackground(new java.awt.Color(233, 231, 231));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/calendar (1).png"))); // NOI18N
         jButton4.setText("Attendance");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
         jPanel2.add(jButton4);
 
         jButton5.setBackground(new java.awt.Color(233, 231, 231));
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-inventory-32.png"))); // NOI18N
         jButton5.setText("Stock");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
         jPanel2.add(jButton5);
 
         jButton6.setBackground(new java.awt.Color(233, 231, 231));
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-inventory-32.png"))); // NOI18N
         jButton6.setText("Inventory");
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
         jPanel2.add(jButton6);
 
         jButton7.setBackground(new java.awt.Color(233, 231, 231));
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-inventory-32.png"))); // NOI18N
         jButton7.setText("Backup");
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton7MouseClicked(evt);
+            }
+        });
         jPanel2.add(jButton7);
 
         jButton8.setBackground(new java.awt.Color(233, 231, 231));
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-inventory-32.png"))); // NOI18N
         jButton8.setText("GRN");
+        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton8MouseClicked(evt);
+            }
+        });
         jPanel2.add(jButton8);
 
         jButton9.setBackground(new java.awt.Color(233, 231, 231));
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-inventory-32.png"))); // NOI18N
         jButton9.setText("Return");
+        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton9MouseClicked(evt);
+            }
+        });
         jPanel2.add(jButton9);
 
         jButton10.setBackground(new java.awt.Color(233, 231, 231));
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-inventory-32.png"))); // NOI18N
         jButton10.setText("PO");
+        jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton10MouseClicked(evt);
+            }
+        });
         jPanel2.add(jButton10);
 
         jButton11.setBackground(new java.awt.Color(233, 231, 231));
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-inventory-32.png"))); // NOI18N
         jButton11.setText("Report");
+        jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton11MouseClicked(evt);
+            }
+        });
         jPanel2.add(jButton11);
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.LINE_START);
 
-        jPanel3.setBackground(new java.awt.Color(255, 102, 51));
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -243,13 +331,6 @@ public class HomeWindow extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        jPanel3.removeAll();
-        Customer customer = new Customer();
-        this.add(customer,BorderLayout.CENTER);
-        SwingUtilities.updateComponentTreeUI(jPanel3);
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         System.exit(0);
@@ -278,10 +359,89 @@ public class HomeWindow extends javax.swing.JFrame {
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         if (jToggleButton1.isSelected()) {
             moveRight();
+            //moveLeft();
         }else{
             moveLeft();
+            //moveRight();
         }
     }//GEN-LAST:event_jToggleButton1ActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        jPanel3.removeAll();
+        Customer customer = new Customer();
+        this.add(customer,BorderLayout.EAST);
+        SwingUtilities.updateComponentTreeUI(jPanel3);
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        jPanel3.removeAll();
+        Product product = new Product();
+        this.add(product,BorderLayout.EAST);
+        SwingUtilities.updateComponentTreeUI(jPanel3);
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        jPanel3.removeAll();
+        Sales sales = new Sales();
+        this.add(sales,BorderLayout.EAST);
+        SwingUtilities.updateComponentTreeUI(jPanel3);
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        jPanel3.removeAll();
+        Attendance attendance = new Attendance();
+        this.add(attendance,BorderLayout.EAST);
+        SwingUtilities.updateComponentTreeUI(jPanel3);
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        jPanel3.removeAll();
+        Stock stock = new Stock();
+        this.add(stock,BorderLayout.EAST);
+        SwingUtilities.updateComponentTreeUI(jPanel3);
+    }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+        jPanel3.removeAll();
+        Inventory inv = new Inventory();
+        this.add(inv,BorderLayout.EAST);
+        SwingUtilities.updateComponentTreeUI(jPanel3);
+    }//GEN-LAST:event_jButton6MouseClicked
+
+    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
+        jPanel3.removeAll();
+        Backup backup = new Backup();
+        this.add(backup,BorderLayout.EAST);
+        SwingUtilities.updateComponentTreeUI(jPanel3);
+    }//GEN-LAST:event_jButton7MouseClicked
+
+    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
+        jPanel3.removeAll();
+        GRN grn = new GRN();
+        this.add(grn,BorderLayout.EAST);
+        SwingUtilities.updateComponentTreeUI(jPanel3);
+    }//GEN-LAST:event_jButton8MouseClicked
+
+    private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
+        jPanel3.removeAll();
+        Return ret = new Return();
+        this.add(ret,BorderLayout.EAST);
+        SwingUtilities.updateComponentTreeUI(jPanel3);
+    }//GEN-LAST:event_jButton9MouseClicked
+
+    private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
+        jPanel3.removeAll();
+        PurchaseOrder po = new PurchaseOrder();
+        this.add(po,BorderLayout.EAST);
+        SwingUtilities.updateComponentTreeUI(jPanel3);
+    }//GEN-LAST:event_jButton10MouseClicked
+
+    private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
+        jPanel3.removeAll();
+        Report rpt = new Report();
+        this.add(rpt,BorderLayout.EAST);
+        SwingUtilities.updateComponentTreeUI(jPanel3);
+    }//GEN-LAST:event_jButton11MouseClicked
 
     /**
      * @param args the command line arguments

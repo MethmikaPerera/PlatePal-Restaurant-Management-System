@@ -8,12 +8,12 @@ package Interfaces;
  *
  * @author bhathiya
  */
-public class Customer extends javax.swing.JPanel {
+public class Attendance extends javax.swing.JPanel {
 
     /**
-     * Creates new form Customer
+     * Creates new form Attendance
      */
-    public Customer() {
+    public Attendance() {
         initComponents();
     }
 
@@ -31,23 +31,23 @@ public class Customer extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(767, 569));
 
-        jLabel1.setText("Customer");
+        jLabel1.setText("Attendance");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(297, 297, 297)
+                .addGap(274, 274, 274)
                 .addComponent(jLabel1)
-                .addContainerGap(476, Short.MAX_VALUE))
+                .addContainerGap(445, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(180, 180, 180)
+                .addGap(204, 204, 204)
                 .addComponent(jLabel1)
-                .addContainerGap(337, Short.MAX_VALUE))
+                .addContainerGap(270, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

@@ -8,12 +8,12 @@ package Interfaces;
  *
  * @author bhathiya
  */
-public class Customer extends javax.swing.JPanel {
+public class PurchaseOrder extends javax.swing.JPanel {
 
     /**
-     * Creates new form Customer
+     * Creates new form PurchaseOrder
      */
-    public Customer() {
+    public PurchaseOrder() {
         initComponents();
     }
 
@@ -28,26 +28,25 @@ public class Customer extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(767, 569));
 
-        jLabel1.setText("Customer");
+        jLabel1.setText("PO");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(297, 297, 297)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(608, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addContainerGap(476, Short.MAX_VALUE))
+                .addGap(122, 122, 122))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(180, 180, 180)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(308, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addContainerGap(337, Short.MAX_VALUE))
+                .addGap(73, 73, 73))
         );
     }// </editor-fold>//GEN-END:initComponents
 

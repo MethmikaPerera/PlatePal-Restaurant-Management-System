@@ -8,12 +8,12 @@ package Interfaces;
  *
  * @author bhathiya
  */
-public class Customer extends javax.swing.JPanel {
+public class Backup extends javax.swing.JPanel {
 
     /**
-     * Creates new form Customer
+     * Creates new form Backup
      */
-    public Customer() {
+    public Backup() {
         initComponents();
     }
 
@@ -28,26 +28,25 @@ public class Customer extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(767, 569));
 
-        jLabel1.setText("Customer");
+        jLabel1.setText("backup");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(297, 297, 297)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(393, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addContainerGap(476, Short.MAX_VALUE))
+                .addGap(344, 344, 344))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(180, 180, 180)
+                .addGap(128, 128, 128)
                 .addComponent(jLabel1)
-                .addContainerGap(337, Short.MAX_VALUE))
+                .addContainerGap(289, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
