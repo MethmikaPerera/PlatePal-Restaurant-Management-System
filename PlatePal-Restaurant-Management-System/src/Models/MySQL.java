@@ -8,29 +8,21 @@ public class MySQL {
 
     private static Connection connection;
 
-    private static String DBName = "platepal_db";
+    private static String DBURL = "jdbc:mysql://localhost:3306/platepal_db";
     private static String User = "root";
     private static String Password = "Password";
 
-    public static void getConnection() {
+    public static void getConnection() throws Exception {
         if (connection == null) {
-            try {
-                Class.forName("com.mysql.cj.jdbc.Driver");
-                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/" + DBName, User, Password);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            connection = DriverManager.getConnection(DBURL, User, Password);
         }
     }
 
-    public static void closeConnection() {
+    public static void closeConnection() throws Exception {
         if (connection != null) {
-            try {
                 connection.close();
                 System.out.println("Database connection closed.");
-            } catch (Exception e) {
-                System.out.println("Error closing the database connection: " + e.getMessage());
-            }
         }
     }
 
