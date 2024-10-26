@@ -140,7 +140,7 @@ public class ActionSelectionWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void customerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerButtonActionPerformed
-        new CustomerOrderingWaitWindow().setVisible(true);
+        new CustomerOrderingWindow().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_customerButtonActionPerformed
 
