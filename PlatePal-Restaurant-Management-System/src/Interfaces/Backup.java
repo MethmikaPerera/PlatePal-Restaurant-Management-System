@@ -28,7 +28,7 @@ public class Backup extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(767, 569));
+        setPreferredSize(new java.awt.Dimension(924, 567));
 
         jLabel1.setText("backup");
 
