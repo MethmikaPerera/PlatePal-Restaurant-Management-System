@@ -37,7 +37,7 @@ public class Backup extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(393, Short.MAX_VALUE)
+                .addContainerGap(345, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(344, 344, 344))
         );
@@ -46,7 +46,7 @@ public class Backup extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(128, 128, 128)
                 .addComponent(jLabel1)
-                .addContainerGap(289, Short.MAX_VALUE))
+                .addContainerGap(252, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
