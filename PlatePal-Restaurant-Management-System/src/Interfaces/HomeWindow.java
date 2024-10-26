@@ -6,9 +6,11 @@ package Interfaces;
 
 import com.formdev.flatlaf.FlatIntelliJLaf;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Point;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 /**
@@ -27,7 +29,7 @@ public class HomeWindow extends javax.swing.JFrame {
         Thread t = new Thread(
                     () -> {
                         
-                        for (int i = 200; i >= 80; i-=10) {
+                        for (int i = 200; i >= 50; i-=10) {
                             jPanel2.setPreferredSize(new Dimension(i,jPanel2.getHeight()));
                             SwingUtilities.updateComponentTreeUI(jPanel2);
                             
@@ -57,7 +59,7 @@ public class HomeWindow extends javax.swing.JFrame {
     private void moveLeft(){
         Thread t = new Thread(
                     () -> {
-                        for (int i = 80; i <= 200; i+=10) {
+                        for (int i = 50; i <= 200; i+=10) {
                             jPanel2.setPreferredSize(new Dimension(i,jPanel2.getHeight()));
                             SwingUtilities.updateComponentTreeUI(jPanel2);
                             
@@ -85,6 +87,40 @@ public class HomeWindow extends javax.swing.JFrame {
             jButton10.setText("PO");
             jButton11.setText("Report");
             
+    }
+    
+    private void updatePanel(JPanel panel) {
+    jPanel3.removeAll();  // Clear all components from jPanel3
+    this.add(panel, BorderLayout.EAST);  // Add the new panel
+    jPanel3.revalidate();  // Refresh layout
+    jPanel3.repaint();  // Update display
+    }
+    
+      private void setNavDefaultC() {
+        jButton1.setBackground(Color.WHITE);
+        jButton2.setBackground(Color.WHITE);
+        jButton3.setBackground(Color.WHITE);
+        jButton4.setBackground(Color.WHITE);
+        jButton5.setBackground(Color.WHITE);
+        jButton6.setBackground(Color.WHITE);
+        jButton7.setBackground(Color.WHITE);
+        jButton8.setBackground(Color.WHITE);
+        jButton9.setBackground(Color.WHITE);
+        jButton10.setBackground(Color.WHITE);
+        jButton11.setBackground(Color.WHITE);
+        
+        jButton1.setForeground(Color.BLACK);
+        jButton2.setForeground(Color.BLACK);
+        jButton3.setForeground(Color.BLACK);
+        jButton4.setForeground(Color.BLACK);
+        jButton5.setForeground(Color.BLACK);
+        jButton6.setForeground(Color.BLACK);
+        jButton7.setForeground(Color.BLACK);
+        jButton8.setForeground(Color.BLACK);
+        jButton9.setForeground(Color.BLACK);
+        jButton10.setForeground(Color.BLACK);
+        jButton11.setForeground(Color.BLACK);
+        
     }
 
     /**
@@ -199,9 +235,11 @@ public class HomeWindow extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(200, 464));
         jPanel2.setLayout(new java.awt.GridLayout(12, 1, 0, 2));
 
-        jButton1.setBackground(new java.awt.Color(233, 231, 231));
+        jButton1.setFont(new java.awt.Font("Helvetica Neue", 1, 15)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/user.png"))); // NOI18N
         jButton1.setText("Customer");
+        jButton1.setFocusable(false);
+        jButton1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jButton1.setIconTextGap(0);
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -211,9 +249,11 @@ public class HomeWindow extends javax.swing.JFrame {
         });
         jPanel2.add(jButton1);
 
-        jButton2.setBackground(new java.awt.Color(233, 231, 231));
+        jButton2.setFont(new java.awt.Font("Helvetica Neue", 1, 15)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/box.png"))); // NOI18N
         jButton2.setText("Product");
+        jButton2.setFocusable(false);
+        jButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton2MouseClicked(evt);
@@ -221,9 +261,11 @@ public class HomeWindow extends javax.swing.JFrame {
         });
         jPanel2.add(jButton2);
 
-        jButton3.setBackground(new java.awt.Color(233, 231, 231));
+        jButton3.setFont(new java.awt.Font("Helvetica Neue", 1, 15)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/sales.png"))); // NOI18N
         jButton3.setText("Sales");
+        jButton3.setFocusable(false);
+        jButton3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton3MouseClicked(evt);
@@ -231,9 +273,11 @@ public class HomeWindow extends javax.swing.JFrame {
         });
         jPanel2.add(jButton3);
 
-        jButton4.setBackground(new java.awt.Color(233, 231, 231));
+        jButton4.setFont(new java.awt.Font("Helvetica Neue", 1, 15)); // NOI18N
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/calendar (1).png"))); // NOI18N
         jButton4.setText("Attendance");
+        jButton4.setFocusable(false);
+        jButton4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton4MouseClicked(evt);
@@ -241,9 +285,11 @@ public class HomeWindow extends javax.swing.JFrame {
         });
         jPanel2.add(jButton4);
 
-        jButton5.setBackground(new java.awt.Color(233, 231, 231));
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-inventory-32.png"))); // NOI18N
+        jButton5.setFont(new java.awt.Font("Helvetica Neue", 1, 15)); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/stock.png"))); // NOI18N
         jButton5.setText("Stock");
+        jButton5.setFocusable(false);
+        jButton5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton5MouseClicked(evt);
@@ -251,9 +297,11 @@ public class HomeWindow extends javax.swing.JFrame {
         });
         jPanel2.add(jButton5);
 
-        jButton6.setBackground(new java.awt.Color(233, 231, 231));
+        jButton6.setFont(new java.awt.Font("Helvetica Neue", 1, 15)); // NOI18N
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-inventory-32.png"))); // NOI18N
         jButton6.setText("Inventory");
+        jButton6.setFocusable(false);
+        jButton6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton6MouseClicked(evt);
@@ -261,9 +309,11 @@ public class HomeWindow extends javax.swing.JFrame {
         });
         jPanel2.add(jButton6);
 
-        jButton7.setBackground(new java.awt.Color(233, 231, 231));
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-inventory-32.png"))); // NOI18N
+        jButton7.setFont(new java.awt.Font("Helvetica Neue", 1, 15)); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/backup.png"))); // NOI18N
         jButton7.setText("Backup");
+        jButton7.setFocusable(false);
+        jButton7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton7MouseClicked(evt);
@@ -271,9 +321,11 @@ public class HomeWindow extends javax.swing.JFrame {
         });
         jPanel2.add(jButton7);
 
-        jButton8.setBackground(new java.awt.Color(233, 231, 231));
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-inventory-32.png"))); // NOI18N
+        jButton8.setFont(new java.awt.Font("Helvetica Neue", 1, 15)); // NOI18N
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/grn.png"))); // NOI18N
         jButton8.setText("GRN");
+        jButton8.setFocusable(false);
+        jButton8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton8MouseClicked(evt);
@@ -281,9 +333,11 @@ public class HomeWindow extends javax.swing.JFrame {
         });
         jPanel2.add(jButton8);
 
-        jButton9.setBackground(new java.awt.Color(233, 231, 231));
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-inventory-32.png"))); // NOI18N
+        jButton9.setFont(new java.awt.Font("Helvetica Neue", 1, 15)); // NOI18N
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/return.png"))); // NOI18N
         jButton9.setText("Return");
+        jButton9.setFocusable(false);
+        jButton9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton9MouseClicked(evt);
@@ -291,9 +345,11 @@ public class HomeWindow extends javax.swing.JFrame {
         });
         jPanel2.add(jButton9);
 
-        jButton10.setBackground(new java.awt.Color(233, 231, 231));
-        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-inventory-32.png"))); // NOI18N
+        jButton10.setFont(new java.awt.Font("Helvetica Neue", 1, 15)); // NOI18N
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/po.png"))); // NOI18N
         jButton10.setText("PO");
+        jButton10.setFocusable(false);
+        jButton10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton10MouseClicked(evt);
@@ -301,9 +357,11 @@ public class HomeWindow extends javax.swing.JFrame {
         });
         jPanel2.add(jButton10);
 
-        jButton11.setBackground(new java.awt.Color(233, 231, 231));
-        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/icons8-inventory-32.png"))); // NOI18N
+        jButton11.setFont(new java.awt.Font("Helvetica Neue", 1, 15)); // NOI18N
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/report.png"))); // NOI18N
         jButton11.setText("Report");
+        jButton11.setFocusable(false);
+        jButton11.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton11MouseClicked(evt);
@@ -367,80 +425,81 @@ public class HomeWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        jPanel3.removeAll();
-        Customer customer = new Customer();
-        this.add(customer,BorderLayout.EAST);
-        SwingUtilities.updateComponentTreeUI(jPanel3);
+        updatePanel(new Customer());
+        setNavDefaultC();
+        jButton1.setBackground(new Color(255, 153, 0));
+        jButton1.setForeground(Color.WHITE);
+        
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        jPanel3.removeAll();
-        Product product = new Product();
-        this.add(product,BorderLayout.EAST);
-        SwingUtilities.updateComponentTreeUI(jPanel3);
+        updatePanel(new Product());
+        setNavDefaultC();
+        jButton2.setBackground(new Color(255, 153, 0));
+        jButton2.setForeground(Color.WHITE);
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-        jPanel3.removeAll();
-        Sales sales = new Sales();
-        this.add(sales,BorderLayout.EAST);
-        SwingUtilities.updateComponentTreeUI(jPanel3);
+        updatePanel(new Sales());
+        setNavDefaultC();
+        jButton3.setBackground(new Color(255, 153, 0));
+        jButton3.setForeground(Color.WHITE);
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
-        jPanel3.removeAll();
-        Attendance attendance = new Attendance();
-        this.add(attendance,BorderLayout.EAST);
-        SwingUtilities.updateComponentTreeUI(jPanel3);
+        updatePanel(new Attendance());
+        setNavDefaultC();
+        jButton4.setBackground(new Color(255, 153, 0));
+        jButton4.setForeground(Color.WHITE);
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
-        jPanel3.removeAll();
-        Stock stock = new Stock();
-        this.add(stock,BorderLayout.EAST);
-        SwingUtilities.updateComponentTreeUI(jPanel3);
+        updatePanel(new Stock());
+        setNavDefaultC();
+        jButton5.setBackground(new Color(255, 153, 0));
+        jButton5.setForeground(Color.WHITE);
     }//GEN-LAST:event_jButton5MouseClicked
 
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
-        jPanel3.removeAll();
-        Inventory inv = new Inventory();
-        this.add(inv,BorderLayout.EAST);
-        SwingUtilities.updateComponentTreeUI(jPanel3);
+        updatePanel(new Inventory());
+        setNavDefaultC();
+        jButton6.setBackground(new Color(255, 153, 0));
+        jButton6.setForeground(Color.WHITE);
     }//GEN-LAST:event_jButton6MouseClicked
 
     private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
-        jPanel3.removeAll();
-        Backup backup = new Backup();
-        this.add(backup,BorderLayout.EAST);
-        SwingUtilities.updateComponentTreeUI(jPanel3);
+        updatePanel(new Backup());
+        setNavDefaultC();
+        jButton7.setBackground(new Color(255, 153, 0));
+        jButton7.setForeground(Color.WHITE);
     }//GEN-LAST:event_jButton7MouseClicked
 
     private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
-        jPanel3.removeAll();
-        GRN grn = new GRN();
-        this.add(grn,BorderLayout.EAST);
-        SwingUtilities.updateComponentTreeUI(jPanel3);
+        updatePanel(new GRN());
+        setNavDefaultC();
+        jButton8.setBackground(new Color(255, 153, 0));
+        jButton8.setForeground(Color.WHITE);
     }//GEN-LAST:event_jButton8MouseClicked
 
     private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
-        jPanel3.removeAll();
-        Return ret = new Return();
-        this.add(ret,BorderLayout.EAST);
-        SwingUtilities.updateComponentTreeUI(jPanel3);
+        updatePanel(new Return());
+        setNavDefaultC();
+        jButton9.setBackground(new Color(255, 153, 0));
+        jButton9.setForeground(Color.WHITE);
     }//GEN-LAST:event_jButton9MouseClicked
 
     private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
-        jPanel3.removeAll();
-        PurchaseOrder po = new PurchaseOrder();
-        this.add(po,BorderLayout.EAST);
-        SwingUtilities.updateComponentTreeUI(jPanel3);
+        updatePanel(new PurchaseOrder());
+        setNavDefaultC();
+        jButton10.setBackground(new Color(255, 153, 0));
+        jButton10.setForeground(Color.WHITE);
     }//GEN-LAST:event_jButton10MouseClicked
 
     private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
-        jPanel3.removeAll();
-        Report rpt = new Report();
-        this.add(rpt,BorderLayout.EAST);
-        SwingUtilities.updateComponentTreeUI(jPanel3);
+        updatePanel(new Report());
+        setNavDefaultC();
+        jButton11.setBackground(new Color(255, 153, 0));
+        jButton11.setForeground(Color.WHITE);
     }//GEN-LAST:event_jButton11MouseClicked
 
     /**
