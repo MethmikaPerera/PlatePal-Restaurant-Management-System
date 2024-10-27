@@ -29,7 +29,7 @@ public class Attendance extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setPreferredSize(new java.awt.Dimension(767, 569));
+        setPreferredSize(new java.awt.Dimension(924, 567));
 
         jLabel1.setText("Attendance");
 
@@ -40,14 +40,14 @@ public class Attendance extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(274, 274, 274)
                 .addComponent(jLabel1)
-                .addContainerGap(445, Short.MAX_VALUE))
+                .addContainerGap(442, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(204, 204, 204)
                 .addComponent(jLabel1)
-                .addContainerGap(270, Short.MAX_VALUE))
+                .addContainerGap(218, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
