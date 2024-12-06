@@ -4,10 +4,7 @@
  */
 package Interfaces;
 
-import com.formdev.flatlaf.FlatIntelliJLaf;
 import com.formdev.flatlaf.themes.FlatMacLightLaf;
-import java.awt.BorderLayout;
-import javax.swing.SwingUtilities;
 
 /**
  *
@@ -168,6 +165,8 @@ public class CustomerOrderingWindow extends javax.swing.JFrame {
         startOrderButton.setText("CLICK HERE TO MAKE AN ORDER");
         startOrderButton.setBorderPainted(false);
         startOrderButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        startOrderButton.setFocusPainted(false);
+        startOrderButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         startOrderButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 startOrderButtonActionPerformed(evt);
@@ -267,8 +266,6 @@ public class CustomerOrderingWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
