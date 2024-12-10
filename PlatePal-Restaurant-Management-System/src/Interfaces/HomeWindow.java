@@ -184,7 +184,7 @@ public class HomeWindow extends javax.swing.JFrame {
         });
 
         jLabel4.setFont(new java.awt.Font("Helvetica Neue", 1, 30)); // NOI18N
-        jLabel4.setText("App Name");
+        jLabel4.setText("Plate Pal");
 
         jToggleButton1.setBackground(new java.awt.Color(204, 204, 204));
         jToggleButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/menu.png"))); // NOI18N
