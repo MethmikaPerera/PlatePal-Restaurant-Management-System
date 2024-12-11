@@ -4,8 +4,11 @@
  */
 package Interfaces;
 
+import Models.MySQL;
 import com.formdev.flatlaf.themes.FlatMacLightLaf;
 import java.awt.Point;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import javax.swing.JFrame;
 
 /**
@@ -246,7 +249,28 @@ public class SetupConnection extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+//        MySQL db = new MySQL();
+//        db.ip = jTextField1.getText().trim();
+//        db.port = jTextField2.getText().trim();
+//        db.dbname = jTextField3.getText().trim();
+//        db.un = jTextField4.getText().trim();
+//        db.pw = jTextField5.getText().trim();
+//        db.dump = jTextField6.getText().trim();
+//        db.path = jTextField7.getText().trim();
+//        
+//        try {
+//            FileOutputStream fileOutputStream = new FileOutputStream("dbinfo.ser");
+//            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+//            objectOutputStream.writeObject(db);
+//            objectOutputStream.close();
+//            
+//            db.createConnection();
+//            
+//            System.out.println("Connection Successfull");
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            System.out.println("Connection Unsuccessfull");
+//        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
