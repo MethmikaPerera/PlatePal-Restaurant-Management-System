@@ -4,15 +4,15 @@
  */
 package Interfaces;
 
+import javax.swing.JFileChooser;
+
 /**
  *
  * @author bhathiya
  */
 public class Backup extends javax.swing.JPanel {
 
-    /**
-     * Creates new form Backup
-     */
+    String fp;
     public Backup() {
         initComponents();
     }
@@ -119,6 +119,11 @@ public class Backup extends javax.swing.JPanel {
 
         jButton1.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
         jButton1.setText("Set Path");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
         jButton2.setText("Backup");
@@ -127,6 +132,11 @@ public class Backup extends javax.swing.JPanel {
 
         jButton3.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
         jButton3.setText("Open File Path");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Poppins", 0, 12)); // NOI18N
         jLabel3.setText("Date");
@@ -224,6 +234,36 @@ public class Backup extends javax.swing.JPanel {
 
         add(jPanel3, java.awt.BorderLayout.PAGE_START);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        try {
+            JFileChooser fileChooser = new JFileChooser();
+            int showOpenDialog = fileChooser.showOpenDialog(this);
+            
+            if (showOpenDialog == 0) {
+                String filepath = fileChooser.getSelectedFile().getAbsolutePath();
+                fp = filepath.replace("\\", "/");
+                jTextField1.setText(fp);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        try {
+            JFileChooser fileChooser = new JFileChooser();
+            int showOpenDialog = fileChooser.showOpenDialog(this);
+            
+            if (showOpenDialog == 0) {
+                String filepath = fileChooser.getSelectedFile().getAbsolutePath();
+                fp = filepath.replace("\\", "/");
+                jTextField2.setText(fp);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
